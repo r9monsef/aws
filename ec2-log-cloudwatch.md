@@ -1,6 +1,8 @@
 ### adding ece2 logs to cloudwatch loggroups 
 
 ```txt
+0-create a IAM role to allow ec2 send logs to log stream
+
 1-create cloudwatch log groups
 
 2-install aws log agent in ec2 instance 
@@ -8,6 +10,23 @@
 3-configure aws agent config file 
 
 ```
+### Step 0: Create a IAM role
+ ```bash
+ AWS Console → IAM → Create role → AWS Service → EC2 → CloudWatchAgentServerPolicy → Name & Create the Role → EC2-CloudWatch-Logs-Role
+
+
+Go to EC2 Dashboard → Instances.
+
+Select your EC2 instance.
+
+Click Actions → Security → Modify IAM Role.
+
+Select the IAM Role (EC2-CloudWatch-Logs-Role).
+
+Click Update IAM Role.
+
+
+ ```
 
 ### Step 1: Download the CloudWatch Agent Package
 
